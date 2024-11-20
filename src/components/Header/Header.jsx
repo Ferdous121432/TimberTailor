@@ -1,7 +1,9 @@
 /* eslint-disable */
 import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
+import Navigation from "../../framer-Navigation/Navigation";
+
 import SocialIcons from "./SocialIcons";
 import { Link } from "react-router-dom";
 
