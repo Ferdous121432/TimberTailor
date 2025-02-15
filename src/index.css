@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .all-\[unset\] {
-    all: unset;
-  }
+html {
+  font-size: 1.2rem;
+  font-family: "Oswald";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
 ::selection {
   background: rgba(184, 142, 47, 0.6);
 }
@@ -115,8 +118,8 @@ code {
 }
 .transform-left {
   position: absolute;
-  top: 50%;
-  left: 6%;
+  top: 0%;
+  left: 5%;
   transform: translate(-50%, 0%);
 }
 

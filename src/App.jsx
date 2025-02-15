@@ -6,89 +6,95 @@ import {
   Route,
   createBrowserRouter,
   RouterProvider,
+  useLocation,
 } from "react-router-dom";
 import { lazy } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Home from "./pages/Home";
-import ProductPage, {
-  loader as ProductLoader,
-  ErrorElement,
-} from "./pages/ProductPage";
 import SingleProductPage from "./pages/SingleProductPage";
-import Cart from "./pages/Cart";
 import ContactUs from "./pages/ContactUs";
-import CheckoutPage from "./pages/CheckoutPage";
 import Signup from "./pages/Signup";
 import SignIn from "./pages/SignIn";
-import RestrictedPage from "./pages/RestrictedPage";
 import About from "./pages/About";
-import DashboardHome from "./components/Dashboard/DashBoardHome/DashboardHome";
-import OrderManagement from "./components/Dashboard/OrderManagement/OrderManagement";
-import DashboardLayoutBasic from "./components/MuiHeader/MuiHeader";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import UserProfile from "./pages/UserProfile";
 import Gallery from "./pages/Gallery";
+import { AnimatePresence, motion } from "framer-motion";
+import ProductPage from "./pages/SingleProductPage";
 
 function App() {
   const { state } = useAuth();
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "category/:category_id",
-      element: <ProductPage />,
-      loader: ProductLoader,
-      errorElement: <ErrorElement />,
-    },
-    {
-      path: "product/f",
-      element: <SingleProductPage />,
-    },
-    {
-      path: "contact-us",
-      element: <ContactUs />,
-    },
-    {
-      path: "userprofile",
-      element: state.isAuthenticated ? <UserProfile /> : <SignIn />,
-      children: [],
-    },
+  const { pathname } = useLocation();
+  const location = useLocation();
 
-    {
-      path: "signup",
-      element: <Signup />,
-    },
-    {
-      path: "signin",
-      element: <SignIn />,
-    },
-    {
-      path: "/product/:product_id",
-      element: <SingleProductPage />,
-    },
-    {
-      path: "about",
-      element: <About />,
-    },
-    {
-      path: "gallery",
-      element: <Gallery />,
-    },
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Home />,
+  //   },
 
-    {
-      path: "*",
-      element: <ErrorPage />,
-    },
-  ]);
+  //   {
+  //     path: "product/f",
+  //     element: <SingleProductPage />,
+  //   },
+  //   {
+  //     path: "contact-us",
+  //     element: <ContactUs />,
+  //   },
+  //   {
+  //     path: "userprofile",
+  //     element: state.isAuthenticated ? <UserProfile /> : <SignIn />,
+  //     children: [],
+  //   },
 
+  //   {
+  //     path: "signup",
+  //     element: <Signup />,
+  //   },
+  //   {
+  //     path: "signin",
+  //     element: <SignIn />,
+  //   },
+  //   {
+  //     path: "/product/:product_id",
+  //     element: <SingleProductPage />,
+  //   },
+  //   {
+  //     path: "about",
+  //     element: <About />,
+  //   },
+  //   {
+  //     path: "gallery",
+  //     element: <Gallery />,
+  //   },
+
+  //   {
+  //     path: "*",
+  //     element: <ErrorPage />,
+  //   },
+  // ]);
+  console.log(location.key);
   return (
     <>
-      <RouterProvider router={router} />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="product/:product_id" element={<ProductPage />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route
+            path="userprofile"
+            element={state.isAuthenticated ? <UserProfile /> : <SignIn />}
+          />
+          <Route path="signup" element={<Signup />} />
+          <Route path="signin" element={<SignIn />} />
+          <Route path="about" element={<About />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </AnimatePresence>
       <ToastContainer
         position="top-center"
         gutter={12}

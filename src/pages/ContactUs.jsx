@@ -1,22 +1,23 @@
 /* eslint-disable */
-import React from 'react';
+import React from "react";
 
-import Layout from '../components/Layout';
-import HeroImage from '../components/ContactUs/HeroImage';
-import ContactSection from '../components/ContactUs/ContactSection';
-import FeatureSection from '../components/FeatureSection/FeatureSection';
+import Layout from "../components/Layout";
+import HeroImage from "../components/ContactUs/HeroImage";
+import ContactSection from "../components/ContactUs/ContactSection";
+import FeatureSection from "../components/FeatureSection/FeatureSection";
+import { motion } from "framer-motion";
 
 function ContactUs() {
   return (
-    <Layout>
-    <div className="flex overflow-hidden flex-col bg-white">
-      
-      <HeroImage />
-      <ContactSection />
-      <FeatureSection />
-      
-    </div>
-    </Layout>
+    <motion.div>
+      <Layout>
+        <div className="flex flex-col overflow-hidden bg-white">
+          <HeroImage />
+          <ContactSection />
+          <FeatureSection />
+        </div>
+      </Layout>
+    </motion.div>
   );
 }
 

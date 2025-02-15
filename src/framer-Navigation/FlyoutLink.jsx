@@ -9,7 +9,7 @@ import ContactUs from "./ContactUs";
 const flyoutVariants = {
   hidden: {
     opacity: 0,
-    y: "15",
+    y: 15,
     transition: {
       duration: 0.5,
       ease: "easeOut",
@@ -17,7 +17,7 @@ const flyoutVariants = {
   },
   visible: {
     opacity: 1,
-    y: "0",
+    y: 0,
     transition: {
       duration: 0.5,
       ease: "easeOut",
@@ -25,7 +25,7 @@ const flyoutVariants = {
   },
 };
 
-export default function FlyoutLink({ children, flyoutContent, href }) {
+export default function FlyoutLink({ children, flyoutContent, link }) {
   const [open, setOpen] = useState(false);
 
   const showFlyout = open && flyoutContent;
@@ -51,7 +51,7 @@ export default function FlyoutLink({ children, flyoutContent, href }) {
       onMouseLeave={() => setOpen(false)}
       className="group h-fit w-full"
     >
-      <Link to="#" className="relative">
+      <Link to={link} className="relative">
         {children}
 
         <span
@@ -68,7 +68,7 @@ export default function FlyoutLink({ children, flyoutContent, href }) {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            style={{ x: "-50%" }}
+            style={{ x: "-48%" }}
             className="absolute left-1/2 top-14"
           >
             <div className="absolute -top-4 left-0 right-0 h-12 w-full bg-transparent" />

@@ -6,6 +6,7 @@ import NewArrivalSection from "../components/NewArrivalSection/NewArrivalSection
 import ProductsSection from "../components/ProductsSection/ProductsSection";
 
 import WhatsApp from "../reuseableComponents/WhatsApp";
+import { delay, motion } from "framer-motion";
 
 export default function Home() {
   const products = [
@@ -103,22 +104,13 @@ export default function Home() {
     <Layout>
       <NewArrivalSection />
       <BrowseRange />
+      <ProductsSection title={"Door Collection"} products={products} />
       <ProductsSection
-        ref={firstSectionRef}
-        title={"Door Collection"}
-        products={products}
-      />
-      <ProductsSection
-        ref={secondSectionRef}
         title={"Floor Designs"}
         products={products}
         righttoLeft={true}
       />
-      <ProductsSection
-        ref={secondSectionRef}
-        title={"Interrior Designs"}
-        products={products}
-      />
+      <ProductsSection title={"Interrior Designs"} products={products} />
       <WhatsApp />
     </Layout>
   );

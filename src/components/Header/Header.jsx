@@ -39,21 +39,22 @@ function Header({ setHeaderHeight }) {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 z-50 w-full bg-yellow-50 px-4 transition-all duration-300 md:px-16 ${
+      className={`fixed top-0 z-10 w-full bg-slate-950 px-4 transition-all duration-300 md:px-16 ${
         isScrolled ? "py-1 md:py-3" : "py-4 md:py-4"
       }`}
     >
       <div className="flex flex-col gap-2">
         <div className="relative flex flex-1 flex-row justify-between">
           <Logo isScrolled={isScrolled} />
-          {isScrolled && <Navigation />}
+          <Navigation />
+          {/* {isScrolled && <Navigation />} */}
 
           <div className="flex max-w-[2/5] items-center justify-end">
-            <SocialIcons isScrolled={isScrolled} />
+            <SocialIcons />
+            {/* <SocialIcons isScrolled={isScrolled} /> */}
           </div>
         </div>
-
-        {!isScrolled && <Navigation />}
+        {/* {!isScrolled && <Navigation />} */}
       </div>
     </header>
   );

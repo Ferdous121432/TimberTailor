@@ -3,14 +3,13 @@ import React from "react";
 
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import { Suspense } from "react";
-import SpinnerFullPage from "./SpinnerFullPage";
-import { Margin } from "@mui/icons-material";
+import TransAnimi1 from "./FramerAnimation/TransAnimi1";
+import TransAnimi2 from "./FramerAnimation/TransAnimi2";
 
 const Layout = ({ children }) => {
   const [headerHeight, setHeaderHeight] = React.useState(0);
   return (
-    <Suspense fallback={<SpinnerFullPage />}>
+    <TransAnimi2>
       <div className="relative flex flex-col overflow-hidden bg-white">
         <Header setHeaderHeight={setHeaderHeight} />
         <main className="mb-20" style={{ marginTop: `${headerHeight}px` }}>
@@ -18,7 +17,7 @@ const Layout = ({ children }) => {
         </main>
         <Footer />
       </div>
-    </Suspense>
+    </TransAnimi2>
   );
 };
 
