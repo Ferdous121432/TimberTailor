@@ -105,7 +105,7 @@ export default function HeroSection() {
         id="hero-frame"
         className="bg-blue-75 relative z-10 h-dvh w-screen overflow-hidden rounded-lg"
       >
-        <div>
+        <div className="absolute inset-0">
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
               onClick={handleMiniVdClick}
@@ -114,7 +114,10 @@ export default function HeroSection() {
               {/* <img src="/img/timber-3.jpg" /> */}
             </div>
           </div>
-          <img src="/img/timber-11.jpg" />
+          <img
+            src="/img/timber-11.jpg"
+            className="h-full w-full object-cover"
+          />
         </div>
         <h1 className="special-font hero-heading text-blue-75 absolute bottom-5 right-5 z-40">
           Cr<b>a</b>ftw<b>oo</b>d

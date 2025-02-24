@@ -81,7 +81,7 @@ body {
   }
 
   .animated-title {
-    @apply text-7xl flex flex-col gap-1 uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
+    @apply text-5xl flex flex-col gap-1 uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
   }
 
   .animated-word {
@@ -100,7 +100,7 @@ body {
   }
 
   .bento-title {
-    @apply font-zentry md:text-6xl text-4xl font-black uppercase;
+    @apply font-zentry md:text-6xl text-2xl font-black uppercase;
   }
 
   .story-img-container {
