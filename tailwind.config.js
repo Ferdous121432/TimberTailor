@@ -12,12 +12,21 @@ module.exports = withMT({
       "2xl": ["1.5rem", "1.82875rem"], // 24px, 29.26px
       "3xl": ["1.75rem", "3.125rem"], // 28px, 50px
       "4xl": ["3rem", "3.625rem"], // 48px, 58px
+      "5xl": ["3.5rem", "4.25rem"], // 56px, 68px
+      "6xl": ["4rem", "4.75rem"], // 64px, 76px
+      "7xl": ["5rem", "6rem"], // 80px, 96px
       "8xl": ["6rem", "7rem"], // 6rem, 7rem
+      "9xl": ["8rem", "9rem"], // 8
     },
     extend: {
       fontFamily: {
         palanquin: ["Palanquin", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        zentry: ["zentry", "sans-serif"],
+        general: ["general", "sans-serif"],
+        "circular-web": ["circular-web", "sans-serif"],
+        "robert-medium": ["robert-medium", "sans-serif"],
+        "robert-regular": ["robert-regular", "sans-serif"],
       },
       colors: {
         "yellow-primary": "#ca8a04",
@@ -32,6 +41,20 @@ module.exports = withMT({
         "emarald-trans": "rgba(6, 95, 70, .01)",
         "red-primary": "#9f1239",
         "red-secondary": "#e11d48",
+        blue: {
+          50: "#DFDFF0",
+          75: "#dfdff2",
+          100: "#F0F2FA",
+          200: "#010101",
+          300: "#4FB7DD",
+        },
+        violet: {
+          300: "#5724ff",
+        },
+        yellow: {
+          100: "#8e983f",
+          300: "#edff66",
+        },
 
         transparent: "transparent",
         current: "currentColor",

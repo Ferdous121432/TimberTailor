@@ -23,6 +23,7 @@ import UserProfile from "./pages/UserProfile";
 import Gallery from "./pages/Gallery";
 import { AnimatePresence, motion } from "framer-motion";
 import ProductPage from "./pages/SingleProductPage";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   const { state } = useAuth();
@@ -30,59 +31,13 @@ function App() {
   const { pathname } = useLocation();
   const location = useLocation();
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Home />,
-  //   },
-
-  //   {
-  //     path: "product/f",
-  //     element: <SingleProductPage />,
-  //   },
-  //   {
-  //     path: "contact-us",
-  //     element: <ContactUs />,
-  //   },
-  //   {
-  //     path: "userprofile",
-  //     element: state.isAuthenticated ? <UserProfile /> : <SignIn />,
-  //     children: [],
-  //   },
-
-  //   {
-  //     path: "signup",
-  //     element: <Signup />,
-  //   },
-  //   {
-  //     path: "signin",
-  //     element: <SignIn />,
-  //   },
-  //   {
-  //     path: "/product/:product_id",
-  //     element: <SingleProductPage />,
-  //   },
-  //   {
-  //     path: "about",
-  //     element: <About />,
-  //   },
-  //   {
-  //     path: "gallery",
-  //     element: <Gallery />,
-  //   },
-
-  //   {
-  //     path: "*",
-  //     element: <ErrorPage />,
-  //   },
-  // ]);
   console.log(location.key);
   return (
     <>
       <AnimatePresence mode="wait">
         <Routes location={location} key={pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="product/:product_id" element={<ProductPage />} />
+          <Route path="/" element={<LandingPage />} />
+          {/* <Route path="product/:product_id" element={<ProductPage />} /> */}
           <Route path="contact-us" element={<ContactUs />} />
           <Route
             path="userprofile"
