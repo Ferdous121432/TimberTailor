@@ -11,7 +11,7 @@ export default function LandingPage() {
   return (
     <main className="relative min-h-screen w-screen overflow-x-hidden">
       <Navigation />
-      <div className="bg-[url('/img/timber-4.jpg')] bg-cover bg-center">
+      <div className="bg-[url('/img/2.jpg')] bg-cover bg-center">
         <HeroSection />
         <About />
       </div>
