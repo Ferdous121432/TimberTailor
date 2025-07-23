@@ -103,7 +103,7 @@ export default function HeroSection() {
       {/* {isLoading && <Loader />} */}
       <div
         id="hero-frame"
-        className="bg-blue-75 relative z-10 h-dvh w-screen overflow-hidden rounded-lg"
+        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
       >
         <div className="absolute inset-0">
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
@@ -119,15 +119,15 @@ export default function HeroSection() {
             className="h-full w-full object-cover"
           />
         </div>
-        <h1 className="special-font hero-heading text-blue-75 absolute bottom-5 right-5 z-40">
+        <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-amber-400">
           Cr<b>a</b>ftw<b>oo</b>d
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-blue-100">
+            <h1 className="special-font hero-heading text-amber-200">
               Ti<b>m</b>ber Tail<b>o</b>r
             </h1>
-            <p className="font-robert-regular mb-5 max-w-64 text-blue-100">
+            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
               Step Into The Craftverse <br />
               Embrace The Elegance of Grain
             </p>

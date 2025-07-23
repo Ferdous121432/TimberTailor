@@ -32,7 +32,7 @@ export default function About() {
         <AnimatedTitle
           title="Disc<b>o</b>ver the Art of
 Timel<b>e</b>ss <br/> Wooden Creations"
-          containerClass="mt-5 !text-black text-center "
+          containerClass="mt-5 !text-black text-center  "
         />
 
         <div className="about-subtext text-slate-50">
