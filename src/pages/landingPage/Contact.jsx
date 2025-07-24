@@ -14,20 +14,30 @@ export default function Contact() {
       <div
         className="relative rounded-lg bg-black py-24 text-slate-50 sm:overflow-hidden"
         style={{
-          backgroundImage: "url('/img/bg-1.jpg')",
           width: "100%",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute -left-20 top-0 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96">
+        {/* Background image with opacity */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/img/bg-1.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.6,
+            pointerEvents: "none",
+          }}
+        />
+        <div className="absolute -left-20 top-0 z-10 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96">
           <ImageClipBox src="/img/f-1.webp" clipClass="contact-clip-path-1" />
           <ImageClipBox
             src="/img/timber-2.jpg"
             clipClass="contact-clip-path-2 lg:translate-y-40 translate-y-60"
           />
         </div>
-        <div className="absolute -top-40 left-20 h-full w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
+        <div className="absolute -top-40 left-20 z-10 h-full w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
           {/* <ImageClipBox
             src="/img/swordman-partial.webp"
             clipClass="absolute md:scale-125"
@@ -37,7 +47,7 @@ export default function Contact() {
             clipClass="sword-man-clip-path md:scale-125"
           />
         </div>
-        <div className="flex flex-col items-center text-center">
+        <div className="relative z-10 flex flex-col items-center text-center">
           <p className="mb-10 font-general text-[12px] uppercase">
             Join timbertailor
           </p>

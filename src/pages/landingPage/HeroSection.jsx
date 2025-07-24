@@ -116,15 +116,15 @@ export default function HeroSection() {
           </div>
           <img
             src="/img/timber-11.jpg"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover opacity-60"
           />
         </div>
-        <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-amber-400">
+        <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-amber-300">
           Cr<b>a</b>ftw<b>oo</b>d
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-amber-200">
+            <h1 className="special-font hero-heading text-stone-800">
               Ti<b>m</b>ber Tail<b>o</b>r
             </h1>
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">

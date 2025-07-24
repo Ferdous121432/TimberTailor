@@ -32,10 +32,10 @@ export default function About() {
         <AnimatedTitle
           title="Disc<b>o</b>ver the Art of
 Timel<b>e</b>ss <br/> Wooden Creations"
-          containerClass="mt-5 !text-black text-center  "
+          containerClass="mt-5 !text-stone-700 text-center  "
         />
 
-        <div className="about-subtext text-slate-50">
+        <div className="about-subtext font-bold text-slate-900">
           <p>
             The Art of Craftsmanship Begins—Your Home, Now a Masterpiece of
             Wooden Elegance
