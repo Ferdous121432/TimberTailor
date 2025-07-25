@@ -23,7 +23,7 @@ export default function Footer() {
           ©
           <span className="text-sm font-bold uppercase hover:text-slate-100">
             Ferdous
-          </span>{" "}
+          </span>
           2025. All rights reserved
         </a>
 

@@ -84,7 +84,7 @@ export default function Navigation() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
+                  className="nav-hover-btn hover:font-bold hover:text-amber-300"
                 >
                   {item}
                 </a>
