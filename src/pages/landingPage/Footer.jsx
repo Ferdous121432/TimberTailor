@@ -12,11 +12,20 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-screen bg-[#5542ff] py-4 text-black">
+    <footer className="w-screen bg-slate-800 py-4 font-semibold text-amber-300">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
-        <p className="text-center text-sm font-light md:text-left">
-          ©Ferdous 2024. All rights reserved
-        </p>
+        <a
+          href="https://firdous.pro"
+          className="text-center text-sm font-light md:text-left"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ©
+          <span className="text-sm font-bold uppercase hover:text-slate-100">
+            Ferdous
+          </span>{" "}
+          2025. All rights reserved
+        </a>
 
         <div className="flex justify-center gap-4 md:justify-start">
           {socialLinks.map((link, index) => (
@@ -25,7 +34,7 @@ export default function Footer() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black transition-colors duration-500 ease-in-out hover:text-white"
+              className="text-amber-300 transition-colors duration-500 ease-in-out hover:text-white"
             >
               {link.icon}
             </a>

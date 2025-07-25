@@ -26,7 +26,7 @@ export default function Contact() {
             backgroundImage: "url('/img/bg-1.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.6,
+            opacity: 0.4,
             pointerEvents: "none",
           }}
         />
